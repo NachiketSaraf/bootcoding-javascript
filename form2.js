@@ -6,16 +6,16 @@ let phoneNo = document.getElementById('phoneNo')
 let pincode = document.getElementById('pincode')
 let dob = document.getElementById('dob')
 let gender = document.getElementById('gender')
-let submit = document.querySelector('submit')
+let submit = document.getElementById('submit')
 
 submit.addEventListener('click',()=>{
     document.write(`My full name is : 
-    ${firstName.value}
-    ${lastName.value}
-    ${address.value}
-    ${emailId.value}
-    ${phoneNo.value}
-    ${pincode.value}
-    ${dob.value}
+    ${firstName.value} <br>
+    ${lastName.value}<br>
+    ${address.value}<br>
+    ${emailId.value}<br>
+    ${phoneNo.value}<br>
+    ${pincode.value}<br>
+    ${dob.value}<br>
     ${gender.value}`)
 })
