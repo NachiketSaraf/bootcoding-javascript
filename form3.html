@@ -14,7 +14,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-4">
-                <form class="row g-3">
+                <form class="row g-3" onsubmit="submitForm(event)">
                     <div class="col-md-12">
                         <label for="firstname" class="form-label">First Name:</label>
                         <input type="text" class="form-control" id="firstname">
@@ -23,14 +23,10 @@
                         <label for="dob" class="form-label">DOB:</label>
                         <input type="date" class="form-control" id="dob">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <label for="gender" class="form-label">Gender</label>
-                        <select id="gender" class="form-control">
-                            <option selected>Select Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
+                        <input type="radio" id="male" value="male" name="gender">Male
+                        <input type="radio" id="female" value="female" name="gender">Female
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Address</label>
@@ -52,9 +48,25 @@
 
                 </form>
 
+                <div id="showData">
+                    <div id="showName"></div>
+                    <br>
+                    <div id="showGender"></div>
+                    <br>
+                    <div id="showDob"></div>
+                    <br>
+                    <div id="showAddress"></div>
+                    <br>
+                    <div id="showCity"></div>
+                </div>
+
             </div>
         </div>
     </div>
+
+
+
 </body>
+
 
 </html>
