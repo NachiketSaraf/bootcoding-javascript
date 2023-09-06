@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+</head>
+
+<body>
+    <h1>Sample Form</h1>
+    <form id="sampleForm" onsubmit="validateForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" ><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" ><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address"></textarea><br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <div id="showData">
+        <div id="showName"></div>
+        <br>
+        <div id="showGender"></div>
+        <br>
+        <div id="showDob"></div>
+        <br>
+        <div id="showAddress"></div>
+        <br>
+        <div id="showCity"></div>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            // Basic validation example (you can add more validation as needed)
+            var name = document.getElementById("name").value;
+            var dob = document.getElementById("dob").value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+            var address = document.getElementById("address").value;
+            var city = document.getElementById("city").value;
+            
+
+
+            document.getElementById('showName').innerHTML = "first name:" + name
+            document.getElementById('showGender').innerHTML = "gender:" + gender
+            document.getElementById('showDob').innerHTML = "Dob :" + dob
+            document.getElementById('showAddress').innerHTML = "Address:" + address
+            document.getElementById('showCity').innerHTML = "City:" + city
+        }
+    </script>
+</body>
+
+</html>
